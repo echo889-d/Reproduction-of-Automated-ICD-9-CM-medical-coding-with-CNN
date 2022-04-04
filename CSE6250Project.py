@@ -3,6 +3,7 @@ import numpy as np
 import sklearn as sk
 import string
 import itertools
+from collections import Counter
 diaglist=["250"]
 
 def extractData():
@@ -52,6 +53,9 @@ def preProcesstext(filtereddf):
     wordslist=processeddf["TEXT"].tolist()
     flatlist=list(itertools.chain(*wordslist))
     wordset=set(flatlist)
+    wordDict=Counter(flatlist)
+    wordDict5orMore= dict(filter(lambda x: x[1] >=5, wordDict.items())) #53229
+    wordDictLessThan5 = dict(filter(lambda x: x[1] <=5, wordDict.items()))
     pass
 
     #162784 tokens to 53229 unique tokens post Levenshtein
