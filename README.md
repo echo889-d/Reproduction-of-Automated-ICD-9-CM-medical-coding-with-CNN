@@ -8,10 +8,12 @@ sklearn
 string
 itertools
 collections
-gensim.models import Word2Vec, KeyedVectors
+gensim.models
 Levenshtein
 pickle (if not rebuilding dictionary from scratch in cell #11)
 fasttext
+keras
+tensorflow
 
 Required Files for Data (From MIMIC-III): 
 NOTEEVENTS.csv
